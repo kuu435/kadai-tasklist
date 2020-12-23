@@ -1,17 +1,5 @@
 <%= form_with(model: task, local: true) do |f| %>
-   <% if task.errors.any? %>
-
-    <div class="alert alert-warning">
-    <ul>
-      <% task.errors.full_messages.each do |task| %>
-      <li>
-        <%= task %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-
-  <% end %>
+  
   <%= f.label :status, 'ステータス' %>
   <%= f.text_field :status %>
   
